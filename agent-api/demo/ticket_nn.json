@@ -1,0 +1,187 @@
+{
+  "msg": "",
+  "content": {
+    "state": "成票成功！",
+    "error": null,
+    "czpid": "86b8a21f-f3c8-4815-a977-9e8988e60fe5",
+    "bh": "23-浦东-11-013873-网",
+    "czrw": "【测试】负荷转供操作票",
+    "occurTime": "2024-11-07 11:32:29",
+    "startTime": "2024-08-02 00:00:00",
+    "endTime": "2024-08-02 23:59:59",
+    "mxItemList": [
+      {
+        "cardOrder": "1",
+        "cardItem": "1",
+        "czdw": "川沙变电中心站",
+        "cznr": "10千伏所有母线清排（除 横22火箭、横32沿北）",
+        "czsn": null,
+        "zlxh": "1",
+        "czdwid": null,
+        "zxdwmc": "横沔站",
+        "remark": "",
+        "operateType": "倒送母线"
+      },
+      {
+        "cardOrder": "2",
+        "cardItem": "2",
+        "czdw": "调度",
+        "cznr": "遥控拉开1号主变10千伏开关",
+        "czsn": null,
+        "zlxh": "1",
+        "czdwid": null,
+        "zxdwmc": "调度/横沔站",
+        "remark": "",
+        "operateType": "倒送母线"
+      },
+      {
+        "cardOrder": "3",
+        "cardItem": "3",
+        "czdw": "调度",
+        "cznr": "遥控拉开2号主变10千伏开关",
+        "czsn": null,
+        "zlxh": "1",
+        "czdwid": null,
+        "zxdwmc": "调度/横沔站",
+        "remark": "",
+        "operateType": "倒送母线"
+      },
+      {
+        "cardOrder": "4",
+        "cardItem": "4",
+        "czdw": "线路操作一组",
+        "cznr": "合上横22火箭2柱上隔离开关",
+        "czsn": null,
+        "zlxh": "1",
+        "czdwid": null,
+        "zxdwmc": "横22火箭",
+        "remark": "",
+        "operateType": "倒送母线"
+      },
+      {
+        "cardOrder": "5",
+        "cardItem": "5",
+        "czdw": "调度",
+        "cznr": "遥控合上横26金柳甲开关",
+        "czsn": null,
+        "zlxh": "1",
+        "czdwid": null,
+        "zxdwmc": "调度/横沔站",
+        "remark": "恢复949户用户供电，共计112.4A负荷",
+        "operateType": "母线复电"
+      },
+      {
+        "cardOrder": "6",
+        "cardItem": "6",
+        "czdw": "调度",
+        "cznr": "遥控合上横21人南开关",
+        "czsn": null,
+        "zlxh": "1",
+        "czdwid": null,
+        "zxdwmc": "调度/横沔站",
+        "remark": "恢复267户用户供电，共计141.5A负荷",
+        "operateType": "母线复电"
+      },
+      {
+        "cardOrder": "7",
+        "cardItem": "7",
+        "czdw": "线路操作一组",
+        "cznr": "合上横32沿北227柱上断路器",
+        "czsn": null,
+        "zlxh": "1",
+        "czdwid": null,
+        "zxdwmc": "横32沿北",
+        "remark": "",
+        "operateType": "倒送母线"
+      },
+      {
+        "cardOrder": "8",
+        "cardItem": "8",
+        "czdw": "调度",
+        "cznr": "遥控合上横36绿太阳开关",
+        "czsn": null,
+        "zlxh": "1",
+        "czdwid": null,
+        "zxdwmc": "调度/横沔站",
+        "remark": "恢复12户用户供电，共计145.3A负荷",
+        "operateType": "母线复电"
+      },
+      {
+        "cardOrder": "9",
+        "cardItem": "9",
+        "czdw": "调度",
+        "cznr": "遥控合上横31高西开关",
+        "czsn": null,
+        "zlxh": "1",
+        "czdwid": null,
+        "zxdwmc": "调度/横沔站",
+        "remark": "恢复15户用户供电，共计245.5A负荷",
+        "operateType": "母线复电"
+      },
+      {
+        "cardOrder": "10",
+        "cardItem": "10",
+        "czdw": "调度",
+        "cznr": "遥控合上横34金柳乙开关",
+        "czsn": null,
+        "zlxh": "1",
+        "czdwid": null,
+        "zxdwmc": "调度/横沔站",
+        "remark": "恢复926户用户供电，共计354.5A负荷",
+        "operateType": "母线复电"
+      },
+      {
+        "cardOrder": "11",
+        "cardItem": "11",
+        "czdw": "线路操作一组",
+        "cznr": "合上科16韩荡5913柱上断路器",
+        "czsn": null,
+        "zlxh": "1",
+        "czdwid": null,
+        "zxdwmc": "科16韩荡",
+        "remark": "恢复106户用户供电，共计187A负荷；单独转供",
+        "operateType": "单独转供"
+      },
+      {
+        "cardOrder": "12",
+        "cardItem": "12",
+        "czdw": "线路操作一组",
+        "cznr": "合上尼31瓦屑404柱上断路器",
+        "czsn": null,
+        "zlxh": "1",
+        "czdwid": null,
+        "zxdwmc": "尼31瓦屑",
+        "remark": "恢复559户用户供电，共计225A负荷；单独转供",
+        "operateType": "单独转供"
+      },
+      {
+        "cardOrder": "13",
+        "cardItem": "13",
+        "czdw": "线路操作一组",
+        "cznr": "合上振10建院42柱上断路器",
+        "czsn": null,
+        "zlxh": "1",
+        "czdwid": null,
+        "zxdwmc": "振10建院",
+        "remark": "恢复8户用户供电，共计22A负荷；单独转供",
+        "operateType": "单独转供"
+      },
+      {
+        "cardOrder": "14",
+        "cardItem": "14",
+        "czdw": "线路操作一组",
+        "cznr": "合上横35沿南44柱上隔离开关",
+        "czsn": null,
+        "zlxh": "1",
+        "czdwid": null,
+        "zxdwmc": "横35沿南",
+        "remark": "恢复911户用户供电，共计164A负荷；单独转供",
+        "operateType": "单独转供"
+      }
+    ],
+    "errMap": {
+      "开口点：博佳苑甲街坊站：10千伏分段一段负荷闸刀/接地闸刀（站内_三位置负荷开关）": "当前开口点不存在或者已出现过"
+    }
+  },
+  "code": 200
+}

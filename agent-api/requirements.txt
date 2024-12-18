@@ -1,0 +1,6 @@
+requests
+flask
+kafka-python
+protobuf
+flask_socketio
+pandas

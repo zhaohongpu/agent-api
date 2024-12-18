@@ -1,0 +1,116 @@
+{
+  "msg": null,
+  "content": {
+    "state": "成票成功！",
+    "error": null,
+    "czpid": "8e240f41-1f0c-4f36-8f2d-ce9a0bdcdf70",
+    "bh": "23-浦东-11-013873-网",
+    "czrw": "【测试】负荷转供操作票",
+    "occurTime": "2024-11-07 11:32:31",
+    "startTime": null,
+    "endTime": null,
+    "mxItemList": [
+      {
+        "cardOrder": "1",
+        "cardItem": "1",
+        "czdw": "线路操作一组",
+        "cznr": "合上瓦10红桥28柱上断路器",
+        "czsn": null,
+        "zlxh": "1",
+        "czdwid": null,
+        "zxdwmc": "瓦10红桥",
+        "remark": "",
+        "operateType": ""
+      },
+      {
+        "cardOrder": "2",
+        "cardItem": "2",
+        "czdw": "调度",
+        "cznr": "遥控拉开医18昌盛开关",
+        "czsn": null,
+        "zlxh": "2",
+        "czdwid": null,
+        "zxdwmc": "调度/医高站",
+        "remark": "累计减负荷48A，共计减载后主变负载率为：144%",
+        "operateType": ""
+      },
+      {
+        "cardOrder": "3",
+        "cardItem": "3",
+        "czdw": "线路操作一组",
+        "cznr": "合上医19申怡6柱上断路器",
+        "czsn": null,
+        "zlxh": "1",
+        "czdwid": null,
+        "zxdwmc": "医19申怡",
+        "remark": "",
+        "operateType": ""
+      },
+      {
+        "cardOrder": "4",
+        "cardItem": "4",
+        "czdw": "调度",
+        "cznr": "遥控拉开医19申怡开关",
+        "czsn": null,
+        "zlxh": "2",
+        "czdwid": null,
+        "zxdwmc": "调度/医高站",
+        "remark": "累计减负荷68A，共计减载后主变负载率为：142%",
+        "operateType": ""
+      },
+      {
+        "cardOrder": "5",
+        "cardItem": "5",
+        "czdw": "线路操作一组",
+        "cznr": "合上医20半夏1714柱上断路器",
+        "czsn": null,
+        "zlxh": "1",
+        "czdwid": null,
+        "zxdwmc": "医20半夏",
+        "remark": "",
+        "operateType": ""
+      },
+      {
+        "cardOrder": "6",
+        "cardItem": "6",
+        "czdw": "调度",
+        "cznr": "遥控拉开医20半夏开关",
+        "czsn": null,
+        "zlxh": "2",
+        "czdwid": null,
+        "zxdwmc": "调度/医高站",
+        "remark": "累计减负荷68A，共计减载后主变负载率为：142%",
+        "operateType": ""
+      },
+      {
+        "cardOrder": "7",
+        "cardItem": "7",
+        "czdw": "线路操作一组",
+        "cznr": "合上坦20丰威12柱上断路器",
+        "czsn": null,
+        "zlxh": "1",
+        "czdwid": null,
+        "zxdwmc": "坦20丰威",
+        "remark": "",
+        "operateType": ""
+      },
+      {
+        "cardOrder": "8",
+        "cardItem": "8",
+        "czdw": "调度",
+        "cznr": "遥控拉开医17世和开关",
+        "czsn": null,
+        "zlxh": "2",
+        "czdwid": null,
+        "zxdwmc": "调度/医高站",
+        "remark": "累计减负荷68A，共计减载后主变负载率为：142%",
+        "operateType": ""
+      }
+    ],
+    "errMap": {
+      "开口点：瓦10红桥/28（线路_柱上断路器）": "当前开口点不存在或者已出现过",
+      "开口点：博佳苑甲街坊站：10千伏分段一段负荷闸刀/接地闸刀（站内_三位置负荷开关）": "当前开口点不存在或者已出现过"
+    }
+  },
+  "code": 200
+}

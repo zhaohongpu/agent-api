@@ -1,0 +1,959 @@
+{
+  "success": true,
+  "message": "请求成功",
+  "data": {
+    "type": null,
+    "subName": null,
+    "textListList": null,
+    "plan1": {
+      "schemeScore": 73.81,
+      "schemeScoreDetails": [
+        {
+          "zsnr": "影响负荷",
+          "level": null,
+          "subtractionScore": 6.19,
+          "reason": "141.86824066974432- 80 / 100",
+          "detail": {
+            "过载负转移后最大负载率载率": 141.86824066974432
+          }
+        },
+        {
+          "zsnr": "影响重要负荷",
+          "level": null,
+          "subtractionScore": 0.0,
+          "reason": "/",
+          "detail": null
+        },
+        {
+          "zsnr": "影响用户数",
+          "level": null,
+          "subtractionScore": 0.0,
+          "reason": "/",
+          "detail": null
+        },
+        {
+          "zsnr": "影响重要用户数",
+          "level": null,
+          "subtractionScore": 0.0,
+          "reason": "/",
+          "detail": null
+        },
+        {
+          "zsnr": "失电设备数",
+          "level": null,
+          "subtractionScore": 0.0,
+          "reason": "/",
+          "detail": null
+        },
+        {
+          "zsnr": "失电设备容量",
+          "level": null,
+          "subtractionScore": 0.0,
+          "reason": "/",
+          "detail": null
+        },
+        {
+          "zsnr": "对侧重过载",
+          "level": null,
+          "subtractionScore": 10.0,
+          "reason": "4248.395930000001/1100.0",
+          "detail": {
+            "过载负载率": 4248.395930000001,
+            "运行主变额定电流": 1100.0
+          }
+        },
+        {
+          "zsnr": "操作次数",
+          "level": null,
+          "subtractionScore": 10.0,
+          "reason": "100/10",
+          "detail": {
+            "非遥控路径": [
+              "瓦10红桥/28（线路_柱上断路器）",
+              "医19申怡/6（线路_柱上断路器）",
+              "医20半夏/1714（线路_柱上断路器）",
+              "瓦10红桥/28（线路_柱上断路器）",
+              "坦20丰威/12（线路_柱上断路器）"
+            ],
+            "等价设备数": 10,
+            "遥控路径": [],
+            "转供路径数": 100
+          }
+        },
+        {
+          "zsnr": "影响重要用户供电结构",
+          "level": null,
+          "subtractionScore": 0.0,
+          "reason": "没有重要用户进线单电源或假多电源",
+          "detail": {}
+        }
+      ],
+      "maxRate": 0.0,
+      "type": "一三方式",
+      "transferTableGroupList": [
+        {
+          "title": "2号主变 故障-过载转供方案",
+          "conclusionText": "2号主变 故障后，1号主变 过载，转供前最高负载率148%，负荷转移后最高负载率可降至142%，转移负荷68A，共转移5条馈线负荷，分别为医18昌盛、医19申怡、医20半夏、医21民治、医17世和",
+          "tranLoadAnalyseTable": null,
+          "transferTableList": [
+            {
+              "tableIndexList": [
+                [
+                  "117093592006132181"
+                ],
+                "117093592006132180"
+              ],
+              "title": "2号主变 故障后，1号主变 过载后转供方案（1628A/148.0%，2024-08-02 16:08）",
+              "rowList": [
+                {
+                  "reduceLoadLine": "医18昌盛",
+                  "thisSideLoad": "48A/400A",
+                  "openPoint": "瓦10红桥/28（线路_柱上断路器）",
+                  "oppositeLine": "瓦屑站瓦10红桥",
+                  "oppositeLineId": null,
+                  "oppositeWindId": null,
+                  "oppositeWindName": null,
+                  "oppositeLoad": "130A/400A\n(82A+48A+0A)",
+                  "oppositeTranMaxLoad": "681A/61.9%\n瓦屑站2号主变",
+                  "transferAfterSituation": "",
+                  "accumulatedReduceLoad": "48A",
+                  "reduceLoadAfterTranLoad": "1580A/144%",
+                  "userPowerAreaCount": "113/8",
+                  "isOppositeLineHighlight": false,
+                  "isOppositeTranHighlight": false,
+                  "deviceData": {
+                    "thisSideLineDeviceDto": {
+                      "devId": "115967692099292208",
+                      "devName": "医高站医18昌盛",
+                      "devType": "LOAD",
+                      "devI": 48.065651,
+                      "devImax": 400.0,
+                      "devLoadRate": 12.02,
+                      "occurTime": "2024-08-02 16:08:56",
+                      "measureSubId": null,
+                      "subName": "医高站",
+                      "devNameRemoveSubName": "医18昌盛",
+                      "devIdMeaSubId": "115967692099292208"
+                    },
+                    "oppositeLineDeviceDto": {
+                      "devId": "115967692099291742",
+                      "devName": "瓦屑站瓦10红桥",
+                      "devType": "LOAD",
+                      "devI": 82.0,
+                      "devImax": 400.0,
+                      "devLoadRate": 20.5,
+                      "occurTime": "2024-08-02 16:08:56",
+                      "measureSubId": null,
+                      "subName": "瓦屑站",
+                      "devNameRemoveSubName": "瓦10红桥",
+                      "devIdMeaSubId": "115967692099291742"
+                    },
+                    "oppositeWindDeviceDto": {
+                      "devId": "117375066982843226",
+                      "devName": "瓦屑站2号主变-低",
+                      "devType": "WINDING",
+                      "devI": 633.0,
+                      "devImax": 1100.0,
+                      "devLoadRate": 57.55,
+                      "occurTime": "2024-08-02 16:08:56",
+                      "measureSubId": null,
+                      "subName": "瓦屑站",
+                      "devNameRemoveSubName": "2号主变-低",
+                      "devIdMeaSubId": "117375066982843226"
+                    },
+                    "oppositeWindI": 681.065651,
+                    "oppositeWindImax": 1100.0
+                  },
+                  "oppositeData": {
+                    "oppositeLineId": "115967692099291742",
+                    "oppositeWindDeviceDto": {
+                      "devId": "117375066982843226",
+                      "devName": "瓦屑站2号主变-低",
+                      "devType": "WINDING",
+                      "devI": 1004.2321014404297,
+                      "devImax": 1100.0,
+                      "devLoadRate": 91.29382740367544,
+                      "occurTime": "2024-08-02 22:34:58",
+                      "measureSubId": null,
+                      "subName": null,
+                      "devNameRemoveSubName": "瓦屑站2号主变-低",
+                      "devIdMeaSubId": "117375066982843226"
+                    }
+                  }
+                },
+                {
+                  "reduceLoadLine": "医19申怡",
+                  "thisSideLoad": "19A/400A",
+                  "openPoint": "医19申怡/6（线路_柱上断路器）",
+                  "oppositeLine": "福守站守32佛手",
+                  "oppositeLineId": null,
+                  "oppositeWindId": null,
+                  "oppositeWindName": null,
+                  "oppositeLoad": "60A/400A\n(41A+19A)",
+                  "oppositeTranMaxLoad": "256A/9.3%\n福守站2号主变",
+                  "transferAfterSituation": "",
+                  "accumulatedReduceLoad": "68A",
+                  "reduceLoadAfterTranLoad": "1561A/142%",
+                  "userPowerAreaCount": "234/4",
+                  "isOppositeLineHighlight": false,
+                  "isOppositeTranHighlight": false,
+                  "deviceData": {
+                    "thisSideLineDeviceDto": {
+                      "devId": "115967692099292209",
+                      "devName": "医高站医19申怡",
+                      "devType": "LOAD",
+                      "devI": 19.460728,
+                      "devImax": 400.0,
+                      "devLoadRate": 4.87,
+                      "occurTime": "2024-08-02 16:08:56",
+                      "measureSubId": null,
+                      "subName": "医高站",
+                      "devNameRemoveSubName": "医19申怡",
+                      "devIdMeaSubId": "115967692099292209"
+                    },
+                    "oppositeLineDeviceDto": {
+                      "devId": "115967692099294947",
+                      "devName": "福守站守32佛手",
+                      "devType": "LOAD",
+                      "devI": 40.699997,
+                      "devImax": 400.0,
+                      "devLoadRate": 10.17,
+                      "occurTime": "2024-08-02 16:08:56",
+                      "measureSubId": null,
+                      "subName": "福守站",
+                      "devNameRemoveSubName": "守32佛手",
+                      "devIdMeaSubId": "115967692099294947"
+                    },
+                    "oppositeWindDeviceDto": {
+                      "devId": "117375066982844040",
+                      "devName": "福守站2号主变-低",
+                      "devType": "WINDING",
+                      "devI": 236.718781,
+                      "devImax": 2749.3,
+                      "devLoadRate": 8.61,
+                      "occurTime": "2024-08-02 16:08:56",
+                      "measureSubId": null,
+                      "subName": "福守站",
+                      "devNameRemoveSubName": "2号主变-低",
+                      "devIdMeaSubId": "117375066982844040"
+                    },
+                    "oppositeWindI": 256.179509,
+                    "oppositeWindImax": 2749.3
+                  },
+                  "oppositeData": {
+                    "oppositeLineId": "115967692099294947",
+                    "oppositeWindDeviceDto": {
+                      "devId": "117375066982844040",
+                      "devName": "福守站2号主变-低",
+                      "devType": "WINDING",
+                      "devI": 287.82108879089355,
+                      "devImax": 2749.3,
+                      "devLoadRate": 10.468886217978888,
+                      "occurTime": "2024-08-02 11:18:26",
+                      "measureSubId": null,
+                      "subName": null,
+                      "devNameRemoveSubName": "福守站2号主变-低",
+                      "devIdMeaSubId": "117375066982844040"
+                    }
+                  }
+                },
+                {
+                  "reduceLoadLine": "医20半夏",
+                  "thisSideLoad": "0A/400A",
+                  "openPoint": "医20半夏/1714（线路_柱上断路器）",
+                  "oppositeLine": "沈达站沈15周阳",
+                  "oppositeLineId": null,
+                  "oppositeWindId": null,
+                  "oppositeWindName": null,
+                  "oppositeLoad": "131A/400A\n(131A+0A)",
+                  "oppositeTranMaxLoad": "2270A/55.4%\n沈达站1号主变",
+                  "transferAfterSituation": "",
+                  "accumulatedReduceLoad": "68A",
+                  "reduceLoadAfterTranLoad": "1561A/142%",
+                  "userPowerAreaCount": "84/15",
+                  "isOppositeLineHighlight": false,
+                  "isOppositeTranHighlight": false,
+                  "deviceData": {
+                    "thisSideLineDeviceDto": {
+                      "devId": "115967692099292210",
+                      "devName": "医高站医20半夏",
+                      "devType": "LOAD",
+                      "devI": 0.0,
+                      "devImax": 400.0,
+                      "devLoadRate": 0.0,
+                      "occurTime": "2024-08-02 16:08:56",
+                      "measureSubId": null,
+                      "subName": "医高站",
+                      "devNameRemoveSubName": "医20半夏",
+                      "devIdMeaSubId": "115967692099292210"
+                    },
+                    "oppositeLineDeviceDto": {
+                      "devId": "115967692099293015",
+                      "devName": "沈达站沈15周阳",
+                      "devType": "LOAD",
+                      "devI": 131.418625,
+                      "devImax": 400.0,
+                      "devLoadRate": 32.85,
+                      "occurTime": "2024-08-02 16:08:56",
+                      "measureSubId": null,
+                      "subName": "沈达站",
+                      "devNameRemoveSubName": "沈15周阳",
+                      "devIdMeaSubId": "115967692099293015"
+                    },
+                    "oppositeWindDeviceDto": {
+                      "devId": "117375066982843576",
+                      "devName": "沈达站1号主变-低",
+                      "devType": "WINDING",
+                      "devI": 2270.229004,
+                      "devImax": 4100.0,
+                      "devLoadRate": 55.37,
+                      "occurTime": "2024-08-02 16:08:56",
+                      "measureSubId": null,
+                      "subName": "沈达站",
+                      "devNameRemoveSubName": "1号主变-低",
+                      "devIdMeaSubId": "117375066982843576"
+                    },
+                    "oppositeWindI": 2270.229004,
+                    "oppositeWindImax": 4100.0
+                  },
+                  "oppositeData": {
+                    "oppositeLineId": "115967692099293015",
+                    "oppositeWindDeviceDto": {
+                      "devId": "117375066982843576",
+                      "devName": "沈达站1号主变-低",
+                      "devType": "WINDING",
+                      "devI": 2306.929931640625,
+                      "devImax": 4100.0,
+                      "devLoadRate": 56.266583698551834,
+                      "occurTime": "2024-08-02 15:54:33",
+                      "measureSubId": null,
+                      "subName": null,
+                      "devNameRemoveSubName": "沈达站1号主变-低",
+                      "devIdMeaSubId": "117375066982843576"
+                    }
+                  }
+                },
+                {
+                  "reduceLoadLine": "医21民治",
+                  "thisSideLoad": "0A/400A",
+                  "openPoint": "瓦10红桥/28（线路_柱上断路器）",
+                  "oppositeLine": "瓦屑站瓦10红桥",
+                  "oppositeLineId": null,
+                  "oppositeWindId": null,
+                  "oppositeWindName": null,
+                  "oppositeLoad": "130A/400A\n(82A+48A+0A)",
+                  "oppositeTranMaxLoad": "681A/61.9%\n瓦屑站2号主变",
+                  "transferAfterSituation": "",
+                  "accumulatedReduceLoad": "68A",
+                  "reduceLoadAfterTranLoad": "1561A/142%",
+                  "userPowerAreaCount": "499/24",
+                  "isOppositeLineHighlight": false,
+                  "isOppositeTranHighlight": false,
+                  "deviceData": {
+                    "thisSideLineDeviceDto": {
+                      "devId": "115967692099292211",
+                      "devName": "医高站医21民治",
+                      "devType": "LOAD",
+                      "devI": 0.0,
+                      "devImax": 400.0,
+                      "devLoadRate": 0.0,
+                      "occurTime": "2024-08-02 16:08:56",
+                      "measureSubId": null,
+                      "subName": "医高站",
+                      "devNameRemoveSubName": "医21民治",
+                      "devIdMeaSubId": "115967692099292211"
+                    },
+                    "oppositeLineDeviceDto": {
+                      "devId": "115967692099291742",
+                      "devName": "瓦屑站瓦10红桥",
+                      "devType": "LOAD",
+                      "devI": 82.0,
+                      "devImax": 400.0,
+                      "devLoadRate": 20.5,
+                      "occurTime": "2024-08-02 16:08:56",
+                      "measureSubId": null,
+                      "subName": "瓦屑站",
+                      "devNameRemoveSubName": "瓦10红桥",
+                      "devIdMeaSubId": "115967692099291742"
+                    },
+                    "oppositeWindDeviceDto": {
+                      "devId": "117375066982843226",
+                      "devName": "瓦屑站2号主变-低",
+                      "devType": "WINDING",
+                      "devI": 633.0,
+                      "devImax": 1100.0,
+                      "devLoadRate": 57.55,
+                      "occurTime": "2024-08-02 16:08:56",
+                      "measureSubId": null,
+                      "subName": "瓦屑站",
+                      "devNameRemoveSubName": "2号主变-低",
+                      "devIdMeaSubId": "117375066982843226"
+                    },
+                    "oppositeWindI": 681.065651,
+                    "oppositeWindImax": 1100.0
+                  },
+                  "oppositeData": {
+                    "oppositeLineId": "115967692099291742",
+                    "oppositeWindDeviceDto": {
+                      "devId": "117375066982843226",
+                      "devName": "瓦屑站2号主变-低",
+                      "devType": "WINDING",
+                      "devI": 1004.2321014404297,
+                      "devImax": 1100.0,
+                      "devLoadRate": 91.29382740367544,
+                      "occurTime": "2024-08-02 22:34:58",
+                      "measureSubId": null,
+                      "subName": null,
+                      "devNameRemoveSubName": "瓦屑站2号主变-低",
+                      "devIdMeaSubId": "117375066982843226"
+                    }
+                  }
+                },
+                {
+                  "reduceLoadLine": "医17世和",
+                  "thisSideLoad": "0A/400A",
+                  "openPoint": "坦20丰威/12（线路_柱上断路器）",
+                  "oppositeLine": "坦直站坦20丰威",
+                  "oppositeLineId": null,
+                  "oppositeWindId": null,
+                  "oppositeWindName": null,
+                  "oppositeLoad": "11A/400A\n(11A+0A)",
+                  "oppositeTranMaxLoad": "536A/31.0%\n坦直站2号主变",
+                  "transferAfterSituation": "",
+                  "accumulatedReduceLoad": "68A",
+                  "reduceLoadAfterTranLoad": "1561A/142%",
+                  "userPowerAreaCount": "1132/32",
+                  "isOppositeLineHighlight": false,
+                  "isOppositeTranHighlight": false,
+                  "deviceData": {
+                    "thisSideLineDeviceDto": {
+                      "devId": "115967692099292207",
+                      "devName": "医高站医17世和",
+                      "devType": "LOAD",
+                      "devI": 0.0,
+                      "devImax": 400.0,
+                      "devLoadRate": 0.0,
+                      "occurTime": "2024-08-02 16:08:56",
+                      "measureSubId": null,
+                      "subName": "医高站",
+                      "devNameRemoveSubName": "医17世和",
+                      "devIdMeaSubId": "115967692099292207"
+                    },
+                    "oppositeLineDeviceDto": {
+                      "devId": "115967692099291620",
+                      "devName": "坦直站坦20丰威",
+                      "devType": "LOAD",
+                      "devI": 10.8,
+                      "devImax": 400.0,
+                      "devLoadRate": 2.7,
+                      "occurTime": "2024-08-02 16:08:56",
+                      "measureSubId": null,
+                      "subName": "坦直站",
+                      "devNameRemoveSubName": "坦20丰威",
+                      "devIdMeaSubId": "115967692099291620"
+                    },
+                    "oppositeWindDeviceDto": {
+                      "devId": "117375066982843179",
+                      "devName": "坦直站2号主变-低",
+                      "devType": "WINDING",
+                      "devI": 536.200012,
+                      "devImax": 1732.0,
+                      "devLoadRate": 30.96,
+                      "occurTime": "2024-08-02 16:08:56",
+                      "measureSubId": null,
+                      "subName": "坦直站",
+                      "devNameRemoveSubName": "2号主变-低",
+                      "devIdMeaSubId": "117375066982843179"
+                    },
+                    "oppositeWindI": 536.200012,
+                    "oppositeWindImax": 1732.0
+                  },
+                  "oppositeData": {
+                    "oppositeLineId": "115967692099291620",
+                    "oppositeWindDeviceDto": {
+                      "devId": "117375066982843179",
+                      "devName": "坦直站2号主变-低",
+                      "devType": "WINDING",
+                      "devI": 569.7999877929688,
+                      "devImax": 1732.0,
+                      "devLoadRate": 32.89838266703053,
+                      "occurTime": "2024-08-02 21:37:30",
+                      "measureSubId": null,
+                      "subName": null,
+                      "devNameRemoveSubName": "坦直站2号主变-低",
+                      "devIdMeaSubId": "117375066982843179"
+                    }
+                  }
+                }
+              ],
+              "tranDataBeforeTransfer": {
+                "devId": "117093592006132180",
+                "devName": "医高站1号主变",
+                "devType": "TRAN",
+                "devI": 1628.0770263671875,
+                "devImax": 1100.0,
+                "devLoadRate": 148.00700239701706,
+                "occurTime": "2024-08-02 16:08:56",
+                "measureSubId": null,
+                "subName": null,
+                "devNameRemoveSubName": "医高站1号主变",
+                "devIdMeaSubId": "117093592006132180"
+              },
+              "tranLoadRateAfterTransfer": 141.86824066974432,
+              "accumulatedTransferLoad": 67.526379,
+              "transfer": {
+                "transferTranDev": {
+                  "devId": "117093592006132180",
+                  "devName": "医高站1号主变",
+                  "devNoSubName": null,
+                  "devVoltLevel": "35kV",
+                  "devType": "TRAN",
+                  "subId": "113997367262314902",
+                  "subName": "医高站",
+                  "subVoltLevel": null,
+                  "measureSubId": null,
+                  "devNameRemoveSubName": "1号主变",
+                  "devIdMeaSubId": "117093592006132180"
+                },
+                "transferTranLowWindDev": {
+                  "devId": "117375066982843348",
+                  "devName": "医高站1号主变-低",
+                  "devNoSubName": null,
+                  "devVoltLevel": "10kV",
+                  "devType": "WINDING",
+                  "subId": "113997367262314902",
+                  "subName": "医高站",
+                  "subVoltLevel": null,
+                  "measureSubId": null,
+                  "devNameRemoveSubName": "1号主变-低",
+                  "devIdMeaSubId": "117375066982843348"
+                },
+                "transferTranBusbarDevList": [
+                  {
+                    "devId": "115404742145868661",
+                    "devName": "医高站10kV一段母线",
+                    "devNoSubName": null,
+                    "devVoltLevel": "10kV",
+                    "devType": "BUSBAR",
+                    "subId": "113997367262314902",
+                    "subName": "医高站",
+                    "subVoltLevel": null,
+                    "measureSubId": null,
+                    "devNameRemoveSubName": "10kV一段母线",
+                    "devIdMeaSubId": "115404742145868661"
+                  }
+                ],
+                "transferPathList": [
+                  {
+                    "maintTranDev": {
+                      "devId": "117093592006132181",
+                      "devName": "医高站2号主变",
+                      "devNoSubName": null,
+                      "devVoltLevel": "35kV",
+                      "devType": "TRAN",
+                      "subId": "113997367262314902",
+                      "subName": "医高站",
+                      "subVoltLevel": null,
+                      "measureSubId": null,
+                      "devNameRemoveSubName": "2号主变",
+                      "devIdMeaSubId": "117093592006132181"
+                    },
+                    "maintTranBreakerDev": {
+                      "devId": "114560317215742769",
+                      "devName": "医高站2号主变10千伏二段车式开关",
+                      "devNoSubName": null,
+                      "devVoltLevel": "10kV",
+                      "devType": "BREAKER",
+                      "subId": "113997367262314902",
+                      "subName": "医高站",
+                      "subVoltLevel": null,
+                      "measureSubId": null,
+                      "devNameRemoveSubName": "2号主变10千伏二段车式开关",
+                      "devIdMeaSubId": "114560317215742769"
+                    },
+                    "maintTranBusbarDev": {
+                      "devId": "115404742145868659",
+                      "devName": "医高站10kV二、三段母线",
+                      "devNoSubName": null,
+                      "devVoltLevel": "10kV",
+                      "devType": "BUSBAR",
+                      "subId": "113997367262314902",
+                      "subName": "医高站",
+                      "subVoltLevel": null,
+                      "measureSubId": null,
+                      "devNameRemoveSubName": "10kV二、三段母线",
+                      "devIdMeaSubId": "115404742145868659"
+                    },
+                    "transferBreakerDev": {
+                      "devId": "114560317215742767",
+                      "devName": "医高站10千伏一/二分段车式开关",
+                      "devNoSubName": null,
+                      "devVoltLevel": "10kV",
+                      "devType": "BREAKER",
+                      "subId": "113997367262314902",
+                      "subName": "医高站",
+                      "subVoltLevel": null,
+                      "measureSubId": null,
+                      "devNameRemoveSubName": "10千伏一/二分段车式开关",
+                      "devIdMeaSubId": "114560317215742767"
+                    },
+                    "transferBusbarDev": {
+                      "devId": "115404742145868661",
+                      "devName": "医高站10kV一段母线",
+                      "devNoSubName": null,
+                      "devVoltLevel": "10kV",
+                      "devType": "BUSBAR",
+                      "subId": "113997367262314902",
+                      "subName": "医高站",
+                      "subVoltLevel": null,
+                      "measureSubId": null,
+                      "devNameRemoveSubName": "10kV一段母线",
+                      "devIdMeaSubId": "115404742145868661"
+                    }
+                  }
+                ],
+                "cutTranBreakerDev": null,
+                "cutTranBusbarDev": null
+              },
+              "lineIiMap": {
+                "115967692099292215": 297.069153,
+                "115967692099292204": 0.0,
+                "115967692099292214": 0.0,
+                "115967692099292203": 0.0,
+                "115967692099292217": 188.862839,
+                "115967692099292206": 310.90271,
+                "115967692099292216": 356.154755,
+                "115967692099292205": 0.0,
+                "115967692099292219": 6.682298,
+                "115967692099292208": 48.065651,
+                "115967692099292207": 0.0,
+                "115967692099292209": 19.460728,
+                "115967692099292211": 0.0,
+                "115967692099292210": 0.0,
+                "115967692099292202": 187.807739,
+                "115967692099292201": 224.032822
+              }
+            }
+          ],
+          "isJoinCutRecommend": null,
+          "transferInfo": {
+            "maintTranDevList": [
+              {
+                "devId": "117093592006132181",
+                "devName": "医高站2号主变",
+                "devNoSubName": null,
+                "devVoltLevel": "35kV",
+                "devType": "TRAN",
+                "subId": "113997367262314902",
+                "subName": "医高站",
+                "subVoltLevel": null,
+                "measureSubId": null,
+                "devNameRemoveSubName": "2号主变",
+                "devIdMeaSubId": "117093592006132181"
+              }
+            ],
+            "maintTranDevListStr": "2号主变",
+            "powerOffBusbarDevList": [],
+            "powerOffBusbarDevListStr": "",
+            "cutTranBreakerDev": null,
+            "transferList": [
+              {
+                "transferTranDev": {
+                  "devId": "117093592006132180",
+                  "devName": "医高站1号主变",
+                  "devNoSubName": null,
+                  "devVoltLevel": "35kV",
+                  "devType": "TRAN",
+                  "subId": "113997367262314902",
+                  "subName": "医高站",
+                  "subVoltLevel": null,
+                  "measureSubId": null,
+                  "devNameRemoveSubName": "1号主变",
+                  "devIdMeaSubId": "117093592006132180"
+                },
+                "transferTranLowWindDev": {
+                  "devId": "117375066982843348",
+                  "devName": "医高站1号主变-低",
+                  "devNoSubName": null,
+                  "devVoltLevel": "10kV",
+                  "devType": "WINDING",
+                  "subId": "113997367262314902",
+                  "subName": "医高站",
+                  "subVoltLevel": null,
+                  "measureSubId": null,
+                  "devNameRemoveSubName": "1号主变-低",
+                  "devIdMeaSubId": "117375066982843348"
+                },
+                "transferTranBusbarDevList": [
+                  {
+                    "devId": "115404742145868661",
+                    "devName": "医高站10kV一段母线",
+                    "devNoSubName": null,
+                    "devVoltLevel": "10kV",
+                    "devType": "BUSBAR",
+                    "subId": "113997367262314902",
+                    "subName": "医高站",
+                    "subVoltLevel": null,
+                    "measureSubId": null,
+                    "devNameRemoveSubName": "10kV一段母线",
+                    "devIdMeaSubId": "115404742145868661"
+                  }
+                ],
+                "transferPathList": [
+                  {
+                    "maintTranDev": {
+                      "devId": "117093592006132181",
+                      "devName": "医高站2号主变",
+                      "devNoSubName": null,
+                      "devVoltLevel": "35kV",
+                      "devType": "TRAN",
+                      "subId": "113997367262314902",
+                      "subName": "医高站",
+                      "subVoltLevel": null,
+                      "measureSubId": null,
+                      "devNameRemoveSubName": "2号主变",
+                      "devIdMeaSubId": "117093592006132181"
+                    },
+                    "maintTranBreakerDev": {
+                      "devId": "114560317215742769",
+                      "devName": "医高站2号主变10千伏二段车式开关",
+                      "devNoSubName": null,
+                      "devVoltLevel": "10kV",
+                      "devType": "BREAKER",
+                      "subId": "113997367262314902",
+                      "subName": "医高站",
+                      "subVoltLevel": null,
+                      "measureSubId": null,
+                      "devNameRemoveSubName": "2号主变10千伏二段车式开关",
+                      "devIdMeaSubId": "114560317215742769"
+                    },
+                    "maintTranBusbarDev": {
+                      "devId": "115404742145868659",
+                      "devName": "医高站10kV二、三段母线",
+                      "devNoSubName": null,
+                      "devVoltLevel": "10kV",
+                      "devType": "BUSBAR",
+                      "subId": "113997367262314902",
+                      "subName": "医高站",
+                      "subVoltLevel": null,
+                      "measureSubId": null,
+                      "devNameRemoveSubName": "10kV二、三段母线",
+                      "devIdMeaSubId": "115404742145868659"
+                    },
+                    "transferBreakerDev": {
+                      "devId": "114560317215742767",
+                      "devName": "医高站10千伏一/二分段车式开关",
+                      "devNoSubName": null,
+                      "devVoltLevel": "10kV",
+                      "devType": "BREAKER",
+                      "subId": "113997367262314902",
+                      "subName": "医高站",
+                      "subVoltLevel": null,
+                      "measureSubId": null,
+                      "devNameRemoveSubName": "10千伏一/二分段车式开关",
+                      "devIdMeaSubId": "114560317215742767"
+                    },
+                    "transferBusbarDev": {
+                      "devId": "115404742145868661",
+                      "devName": "医高站10kV一段母线",
+                      "devNoSubName": null,
+                      "devVoltLevel": "10kV",
+                      "devType": "BUSBAR",
+                      "subId": "113997367262314902",
+                      "subName": "医高站",
+                      "subVoltLevel": null,
+                      "measureSubId": null,
+                      "devNameRemoveSubName": "10kV一段母线",
+                      "devIdMeaSubId": "115404742145868661"
+                    }
+                  }
+                ],
+                "cutTranBreakerDev": null,
+                "cutTranBusbarDev": null
+              }
+            ],
+            "isJoinCut": null,
+            "maintBusbarDevList": [
+              {
+                "devId": "115404742145868659",
+                "devName": "医高站10kV二段母线",
+                "devNoSubName": null,
+                "devVoltLevel": "10kV",
+                "devType": "BUSBAR",
+                "subId": "113997367262314902",
+                "subName": "医高站",
+                "subVoltLevel": null,
+                "measureSubId": null,
+                "devNameRemoveSubName": "10kV二段母线",
+                "devIdMeaSubId": "115404742145868659"
+              },
+              {
+                "devId": "115404742145868660",
+                "devName": "医高站10kV三段母线",
+                "devNoSubName": null,
+                "devVoltLevel": "10kV",
+                "devType": "BUSBAR",
+                "subId": "113997367262314902",
+                "subName": "医高站",
+                "subVoltLevel": null,
+                "measureSubId": null,
+                "devNameRemoveSubName": "10kV三段母线",
+                "devIdMeaSubId": "115404742145868660"
+              }
+            ]
+          }
+        }
+      ],
+      "lineAndAndOppositeLines": [
+        {
+          "busbarDev": {
+            "devId": "115404742145868659",
+            "devName": "医高站10kV二、三段母线",
+            "devNoSubName": null,
+            "devVoltLevel": "10kV",
+            "devType": "BUSBAR",
+            "subId": "113997367262314902",
+            "subName": "医高站",
+            "subVoltLevel": null,
+            "measureSubId": null,
+            "devNameRemoveSubName": "10kV二、三段母线",
+            "devIdMeaSubId": "115404742145868659"
+          },
+          "thisLineDeviceDto": {
+            "devId": "115967692099292211",
+            "devName": "医高站医21民治",
+            "devType": "LOAD",
+            "devI": 0.0,
+            "devImax": 400.0,
+            "devLoadRate": 0.0,
+            "occurTime": null,
+            "measureSubId": null,
+            "subName": "医高站",
+            "devNameRemoveSubName": "医21民治",
+            "devIdMeaSubId": "115967692099292211"
+          },
+          "oppositeLineDeviceDto": {
+            "devId": "115967692099291742",
+            "devName": "瓦屑站瓦10红桥",
+            "devType": "LOAD",
+            "devI": 113.0,
+            "devImax": 400.0,
+            "devLoadRate": 28.249999999999996,
+            "occurTime": "2024-08-02 22:22:39",
+            "measureSubId": null,
+            "subName": null,
+            "devNameRemoveSubName": "瓦屑站瓦10红桥",
+            "devIdMeaSubId": "115967692099291742"
+          },
+          "oppositeWindDeviceDto": {
+            "devId": "117375066982843226",
+            "devName": "瓦屑站2号主变-低",
+            "devType": "WINDING",
+            "devI": 970.0,
+            "devImax": 1100.0,
+            "devLoadRate": 88.18181818181819,
+            "occurTime": "2024-08-02 22:34:58",
+            "measureSubId": null,
+            "subName": null,
+            "devNameRemoveSubName": "瓦屑站2号主变-低",
+            "devIdMeaSubId": "117375066982843226"
+          },
+          "openPoint": "瓦10红桥/28（线路_柱上断路器）",
+          "thisBreakDev": {
+            "devId": "114560317215742784",
+            "devName": "医高站医21民治车式开关",
+            "devNoSubName": null,
+            "devVoltLevel": "10kV",
+            "devType": "BREAKER",
+            "subId": "113997367262314902",
+            "subName": "医高站",
+            "subVoltLevel": null,
+            "measureSubId": null,
+            "devNameRemoveSubName": "医21民治车式开关",
+            "devIdMeaSubId": "114560317215742784"
+          },
+          "oppositeBreakDev": {
+            "devId": "114560317215741767",
+            "devName": "瓦屑站瓦10红桥开关",
+            "devNoSubName": null,
+            "devVoltLevel": "10kV",
+            "devType": "BREAKER",
+            "subId": "113997367262314836",
+            "subName": "瓦屑站",
+            "subVoltLevel": null,
+            "measureSubId": null,
+            "devNameRemoveSubName": "瓦10红桥开关",
+            "devIdMeaSubId": "114560317215741767"
+          }
+        }
+      ]
+    },
+    "plan2": null,
+    "dispatchAccidentPreplanMathFilterVm": {
+      "type": "N-1",
+      "subId": "113997367262314902",
+      "maintDevice": [
+        {
+          "type": "TRAN",
+          "devIdList": [
+            "117093592006132181"
+          ],
+          "text": "2号主变"
+        }
+      ],
+      "busbarReceiveLineList": [],
+      "faultLineList": [],
+      "notPjLineList": [],
+      "beginDate": "2024-08-02",
+      "endDate": "2024-08-02",
+      "beginTime": "00:00:00",
+      "endTime": "23:59:59",
+      "dtFileTime": null,
+      "joinCutType": null,
+      "lineLoadRateThreshold": 100.0,
+      "loadRateSetupDTOList": [],
+      "isHeavyLoad": false,
+      "isYaoKong": true,
+      "isAreaDifferent": true,
+      "isImportantUserSingle": true,
+      "isImportantUserSuperSingle": true,
+      "busbarRepeatLineList": [],
+      "busbarNotRepeatLineList": [],
+      "isBusBarRecover": true,
+      "mathematicalObjective": {
+        "loadObjective": {
+          "unit": 10,
+          "weight": 100
+        },
+        "userLoadObjective": {
+          "unit": 10,
+          "weight": 500
+        },
+        "areaNumObjective": {
+          "unit": 1,
+          "weight": 20
+        },
+        "notYaoKongNumObjective": {
+          "unit": 1,
+          "weight": 10
+        },
+        "yaoKongNumObjective": {
+          "unit": 1,
+          "weight": 1
+        },
+        "userNumberObjective": {
+          "unit": 10,
+          "weight": 0
+        },
+        "importantUserNumberObjective": {
+          "unit": 1,
+          "weight": 0
+        }
+      },
+      "subLoadRateUpLimit": null,
+      "subLoadRateDownLimit": null
+    }
+  },
+  "code": 200,
+  "timestamp": 1730900608005
+}

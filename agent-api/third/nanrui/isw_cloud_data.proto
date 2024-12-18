@@ -1,0 +1,268 @@
+//设备故障报文
+message  isw_fault_info_list  {
+    //传输类型
+    optional int32 type = 1;
+    //故障数量
+    optional int32 fault_num = 2;
+    //系统名称
+    optional bytes system_name  = 3;
+    //故障列表
+    repeated isw_dev_fault_info_list  fault_list = 4;
+    //评级及停电范围
+    repeated TransFaultEventStru  trans_off_fault = 5;
+}
+
+//设备故障信息
+message  isw_dev_fault_info_list  {
+    //事件ID
+    optional int32 event_id = 1;
+    //故障时间
+    optional int64 fault_sec = 2;
+    //毫秒
+    optional int32 fault_msec = 3;
+    //设备ID
+    optional bytes fault_dev  = 4;
+    //设备名称
+    optional bytes dev_name  = 5;
+    //故障相
+    optional int32 fault_phase = 6;
+    //重合情况
+    optional int32 reclose_stat = 7;
+    //首端测距
+    optional float fault_dis_01 = 8;
+    //末端测距
+    optional float fault_dis_02 = 9;
+    //首端电流
+    optional float fault_cur_01 = 10;
+    //末端电流
+    optional float fault_cur_02 = 11;
+    //首端厂站
+    optional bytes seq_fac01  = 12;
+    //末端厂站
+    optional bytes seq_fac02  = 13;
+    //首端厂站名称
+    optional bytes fac01_name  = 14;
+    //末端厂站名称
+    optional bytes fac02_name  = 15;
+    //线路端点ID
+    repeated bytes ln_nodes  = 16;
+    //SOE事件ID
+    optional bytes soe_event_id  = 17;
+    //PMU事件ID
+    optional bytes pmu_event_id  = 18;
+    //保护动作信息		
+    optional bytes relay_act_info= 19;
+    //告警来源
+    optional int32 path = 20;
+    //是否确认
+    optional int32 is_ack = 21;
+    //告警描述
+    optional bytes describe = 22;
+    //电压等级
+    optional int32 voltage_type = 23;
+    //开关动作
+    repeated isw_brk_act_data brk_data_list = 24;
+    //保护动作 
+    repeated isw_relay_act_data relay_data_list = 25;
+    //备自投动作
+    repeated isw_bzt_data bzt_data_list  = 26;
+    //自愈动作
+    repeated isw_zy_data zy_data_list = 27;
+}
+
+//开关动作信息
+message  isw_brk_act_data  {
+    //动作时间
+    optional int64 fault_time = 1;
+    //毫秒
+    optional int32 fault_msec = 2;
+    //厂站ID
+    optional bytes fac_id  = 3;
+    //开关ID
+    optional bytes brk_id  = 4;
+    //开关名称
+    optional bytes brk_name = 5;
+    //开关状态
+    optional int32 brk_status = 6;
+    //信号类型
+    optional int32 sig_type = 7;
+    //相位
+    optional int32 brk_phase = 8;
+    //事件标识
+    optional bytes event_id  = 9;
+    //分析状态
+    optional int32 ana_sta = 10;
+}
+
+//保护动作信息
+message  isw_relay_act_data  {
+    //动作时间
+    optional int64 fault_time = 1;
+    //毫秒
+    optional int32 fault_msec = 2;
+    //厂站ID
+    optional bytes fac_id  = 3;
+    //保护ID
+    optional bytes relay_id  = 4;
+    //关联设备ID
+    optional bytes dev_id  = 5;
+    //保护名称
+    optional bytes relay_name = 6;
+    //保护状态
+    optional int32 status = 7;
+    //信号类型
+    optional int32 sig_type = 8;
+    //事件标识
+    optional bytes event_id  = 9;
+    //分析状态
+    optional int32 ana_sta = 10;
+	
+}
+
+//备自投动作信息
+message  isw_bzt_data
+{
+    optional int32    event_id = 1;           //事件标识
+    optional int64    act_time = 2;           //动作时间
+    optional int32    msec = 3;               //毫秒
+    optional bytes    bzt_id = 4;             //备自投ID
+    optional bytes    bzt_name = 5;           //备自投名称
+    optional bytes    st_id = 6;              //厂站ID
+    optional bytes    st_name = 7;            //厂站名称
+    optional int32    vl_type = 8;            //电压类型
+    optional int32    is_succ = 9;            //是否自投成功
+    optional bytes    brk_id = 10;            //动作开关ID
+    optional bytes    brk_name = 11;          //开关名称
+    optional int32    brk_status = 12;        //开关状态
+
+}
+
+//自愈动作信息
+message  isw_zy_data
+{
+    optional int32    event_id = 1;           //事件标识
+    optional int64    act_time = 2;           //动作时间
+    optional int32    msec = 3;               //毫秒
+    optional int32    zy_id = 4;              //自愈ID
+    optional bytes    zy_name = 5;            //自愈名称
+    optional bytes    st_id = 6;              //厂站ID
+    optional bytes    st_name = 7;            //厂站名称
+    optional int32    vl_type = 8;            //电压类型
+    optional int32    is_succ = 9;            //是否自愈成功
+    optional bytes    brk_id = 10;            //动作开关ID
+    optional bytes    brk_name = 11;          //开关名称
+    optional int32    brk_status = 12;        //开关状态
+
+}
+
+message TransFaultEventStru
+{
+    repeated EvaluateStru evaluate_info = 1;//评级信息
+    repeated OffDevStru off_vec = 2;//停电设备信息
+    repeated RiskInfoStru risk_vec = 3;//薄弱信息
+    repeated ImportUserStru user_vec = 4;//重要用户信息
+    repeated GroundOverStru over_vec = 5;//越限信息
+    repeated LostStStru lost_st_vec = 6;//失压厂站信息
+}
+
+message OffDevStru
+{
+    optional int32 event_id = 1; //标识
+    optional bytes off_dev = 2;//停电设备ID
+    optional bytes dev_name = 3;//停电设备名称
+    optional int32 vl_type = 4;  //标称电压
+    optional int32 fac_type = 5;//厂站类型
+    optional bytes fac_name = 6;//厂站名称
+    optional bytes first_st = 7;//首端厂站名称
+    optional bytes second_st = 8;//末端厂站名称
+    optional int32 dev_type = 9;//设备类型
+    optional int32 is_restore = 10;//是否复电
+    optional float p = 11;//损失功率
+    repeated bytes ln_nodes  = 12;//线路端点ID
+}
+
+message  EvaluateStru
+{
+	optional int32 event_id = 1;//标识
+        optional bytes fault_dev = 2;//故障设备
+	optional int64 fault_sec =3 ;//故障时间
+	optional int32 fault_level = 4;//事件评级
+        optional bytes fault_desc = 5;//故障描述
+        optional bytes rule_desc = 6;//评级依据
+	optional float lost_load = 7;//总损失负荷
+	optional float lost_per = 8;//总损失负荷比例
+	optional float load_before = 9;//故障前功率
+	optional int32 power_off_num = 10;//停电用户数量
+	optional float power_off_per = 11;//停电用户比例
+        optional bytes effect_vip = 12;//停电重要用户
+	optional int32 lost_st_num = 13;//失电厂站数
+	optional int32 lost_bus_num = 14;//失电母线数
+	optional int64 update_sec = 15;//更新时间
+        optional bytes source_system = 16;//源系统
+        optional int32 report_level = 17;//报告事件等级
+        optional bytes report_rule_desc = 18;//报告事件等级依据
+        optional float lost_city_load = 19;//城市总损失负荷
+}
+
+
+message RiskInfoStru
+{
+    optional int32 event_id = 1; //标识
+    optional bytes risk_dev = 2;//薄弱设备ID
+    optional bytes dev_name = 3;//薄弱设备名称
+    optional bytes st_id = 4;//厂站ID
+    optional bytes st_name = 5;//厂站名称
+    optional bytes weaktype = 6;//薄弱类型
+    optional float lost_power = 7;//损失负荷
+    optional int32 vl = 8;  //标称电压
+    optional int32 is_new = 9;  //是否新增
+}
+
+
+message ImportUserStru
+{
+    optional int32 event_id = 1; //标识
+    optional bytes off_dev = 2;//停电设备ID
+    optional bytes dev_name = 3;//停电设备名称
+    optional bytes fac_name = 4;//厂站名称
+    optional int32 vl_type = 5;  //标称电压
+    optional bytes vip_name = 6;//重要用户名
+    optional int32 load_level = 7;//用户等级
+    optional bytes load_type = 8;//用户类别
+}
+
+message GroundOverStru
+{
+    optional int32 event_id = 1; //标识
+    optional int32 warn_type = 2;//告警类型
+    optional int32 warn_level = 3;//告警等级
+    optional bytes warn_st = 4;//厂站
+    optional bytes st_name = 5;//厂站名称
+    optional bytes warn_dev = 6;  //越限设备
+    optional bytes warn_dev_name = 7;  //越限设备名称
+    optional float warn_value = 8;//越限值
+    optional float warn_set = 9;//限值
+    optional bytes fault_dev = 10;//开断设备
+    optional bytes fault_dev_name = 11;//开断设备名称
+    optional int32 voltage_type = 12;//电压等级
+}
+
+message LostStStru
+{
+    optional int32 event_id = 1; //标识
+    optional bytes st_id = 2;//停电厂站ID
+    optional bytes st_name = 3;//停电厂站名称
+    optional int32 vl_type = 4;  //标称电压
+    optional int32 is_restore = 5;//是否复电
+
+}
+
+
+// c++文件生成命令 protoc --cpp_out=./ ./isw_cloud_data.proto
+
+
+
+
+
+
+
