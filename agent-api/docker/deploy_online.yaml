@@ -1,0 +1,134 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: agent-api
+spec:
+  selector:
+    matchLabels:
+      app: agent-api
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: agent-api
+    spec:
+      hostNetwork: true
+      nodeSelector:
+        kubernetes.io/hostname: nwai-qianfanab-prd-ecs02
+      containers:
+        - name: api
+          image: jerry9916/agent-api:latest
+          command: ["sh", "-c", "python3 app.py"]
+          imagePullPolicy: IfNotPresent
+          env:
+            - name: MOCK_CONVERSATION_ID
+              value: '0'
+            - name: APP_DEBUG_ENABLE
+              value: '1'
+            - name: KAFKA_CONSUMER_ENABLE
+              value: '1'
+            - name: KAFKA_SERVERS
+              value: '10.130.16.112:9092,10.130.16.120:9092,10.130.16.121:9092'
+          ports:
+            - containerPort: 8188
+          volumeMounts:
+            - mountPath: /root/agent-api
+              name: api-code
+        - name: nginx
+          image: nginx:1.23.1
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8088
+          volumeMounts:
+            - mountPath: /etc/nginx/conf.d/default.conf
+              name: nginx-config
+              subPath: default.conf
+            - mountPath: /usr/share/nginx/html
+              name: nginx-root
+      volumes:
+        - name: api-code
+          hostPath:
+            path: /data/deploy/agent-api
+            type: DirectoryOrCreate
+        - name: nginx-config
+          configMap:
+            name: agent-api-nginx-configmap
+        - name: nginx-root
+          hostPath:
+            path: /data/deploy/agent-api-fe
+            type: DirectoryOrCreate
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: agent-api-nginx-configmap
+data:
+  default.conf: |-
+    server {
+        listen       8088;
+        root   /usr/share/nginx/html;
+
+        location / {
+            index  index.html index.htm;
+        }
+    
+        location /socket.io {
+            proxy_pass http://127.0.0.1:8188;
+            proxy_set_header Host $host;
+            proxy_http_version 1.1;
+            proxy_set_header Upgrade $http_upgrade;
+            proxy_set_header Connection "Upgrade";
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_read_timeout 3600s;
+        }
+    
+        location /agent/api {
+            if ($request_method = 'OPTIONS2') { # disabled
+                add_header 'Access-Control-Allow-Origin' '*';
+                add_header 'Access-Control-Allow-Methods' 'GET, POST, OPTIONS';
+                add_header 'Access-Control-Allow-Headers' 'X-Appbuilder-Sdk-Config,X-Appbuilder-Origin,X-Appbuilder-Request-Id,X-Bce-Request-Id,X-Authorization,authorization,Content-Type';
+                add_header 'Access-Control-Max-Age' 1728000;
+                add_header 'Content-Type' 'text/plain charset=UTF-8';
+                add_header 'Content-Length' 0;
+                return 204;
+            }
+    
+            proxy_pass http://127.0.0.1:8188;
+            proxy_set_header Host $host;
+            proxy_http_version 1.1;
+            proxy_set_header Upgrade $http_upgrade;
+            proxy_set_header Connection "Upgrade";
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_read_timeout 3600s;
+        }
+        
+        location /api/ai_apaas/v1 {
+            if ($request_method = 'OPTIONS2') { # disabled
+                add_header 'Access-Control-Allow-Origin' '*';
+                add_header 'Access-Control-Allow-Methods' 'GET, POST, OPTIONS';
+                add_header 'Access-Control-Allow-Headers' 'X-Appbuilder-Sdk-Config,X-Appbuilder-Origin,X-Appbuilder-Request-Id,X-Bce-Request-Id,X-Authorization,authorization,Content-Type';
+                add_header 'Access-Control-Max-Age' 1728000;
+                add_header 'Content-Type' 'text/plain charset=UTF-8';
+                add_header 'Content-Length' 0;
+                return 204;
+            }
+    
+            proxy_pass http://25.45.24.127;
+            proxy_read_timeout 3600s;
+        }
+    
+        location /netorder {
+            if ($request_method = 'OPTIONS2') { # disabled
+                add_header 'Access-Control-Allow-Origin' '*';
+                add_header 'Access-Control-Allow-Methods' 'GET, POST, OPTIONS';
+                add_header 'Access-Control-Allow-Headers' 'X-Appbuilder-Sdk-Config,X-Appbuilder-Origin,X-Appbuilder-Request-Id,X-Bce-Request-Id,X-Authorization,authorization,Content-Type';
+                add_header 'Access-Control-Max-Age' 1728000;
+                add_header 'Content-Type' 'text/plain charset=UTF-8';
+                add_header 'Content-Length' 0;
+                return 204;
+            }
+    
+            proxy_pass http://10.130.16.61:8088;
+            proxy_read_timeout 3600s;
+        }
+    }
